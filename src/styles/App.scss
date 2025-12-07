@@ -3,6 +3,11 @@
 #root {
   --section-gap: 20px;
   padding: 2rem 3rem; 
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .summary-grid-container {
@@ -10,7 +15,7 @@
   grid-template-rows: 1fr minmax(270px, 1fr);
   row-gap: var(--section-gap);
   width: min(1200px, calc(100vw - 6rem));
-  height: min(90vh, 700px);
+  max-height: 700px;
 }
 
 .grid-row,
@@ -73,7 +78,7 @@
 
 @media (max-width: bp.$small) {
   #root {
-    padding: 1rem 1rem; 
+    padding: 1rem; 
     --section-gap: 10px;
   }
   .grid-section {
@@ -96,10 +101,16 @@
 
 @media (min-width: #{bp.$medium_1 + 1}) and (max-width: bp.$medium-2) {
   #root {
-    padding: 1.5rem 2.5rem; 
+    padding: 2rem; 
     --section-gap: 15px;
   }
   .grid-section {
     padding: 15px;
+  }
+}
+
+@media (max-width: bp.$medium-2) {
+  #root {
+    align-items: flex-start;
   }
 }
