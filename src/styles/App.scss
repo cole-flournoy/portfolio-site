@@ -73,7 +73,7 @@
 
 @media (max-width: bp.$small) {
   #root {
-    padding: 1rem 1rem; 
+    padding: 1rem; 
     --section-gap: 10px;
   }
   .grid-section {
@@ -96,7 +96,7 @@
 
 @media (min-width: #{bp.$medium_1 + 1}) and (max-width: bp.$medium-2) {
   #root {
-    padding: 1.5rem 2.5rem; 
+    padding: 2rem; 
     --section-gap: 15px;
   }
   .grid-section {

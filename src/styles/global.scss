@@ -1,3 +1,5 @@
+@use '../styles/breakpoints.scss' as bp;
+
 :root {
   --color-light-text: rgba(208, 208, 198, 0.95);
   --color-faded-light-text: rgba(208, 208, 198, 0.2);
@@ -43,6 +45,12 @@ body {
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+@media (max-width: bp.$medium-2) {
+  body {
+    align-items: start;
+  }
 }
 
 /* @media (prefers-color-scheme: light) {
