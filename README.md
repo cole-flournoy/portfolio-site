@@ -1,6 +1,6 @@
 # Portfolio Website
 
-I'm a full-stack software engineer, and this is v1 of my portfolio site. 
+I'm a full-stack software engineer, and this is v1 of my portfolio site. Check out the [live site](https://coleflournoy.dev/?utm_source=github).  
 
 **The site is now fully mobile responsive!** The best experience will still be on large screens (I am a web developer after all), but I've designed layouts for a variety of screen sizes that hopefully optimize the available space while keeping the feel of the site intact. Check them out and let me know what you think! 
 
