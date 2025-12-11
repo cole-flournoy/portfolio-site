@@ -6,7 +6,7 @@ import Education from './sections/Education'
 import Contact from './sections/Contact'
 import Skills from './sections/Skills'
 import Build from './sections/Build'
-import Testmonials from './sections/Testimonials'
+import Testimonials from './sections/Testimonials'
 import Experience from './sections/Experience'
 import initializeAnalytics from './analytics/initializeAnalytics'
 import sendSectionHoverEvent from './analytics/sendSectionHoverEvent'
@@ -72,7 +72,7 @@ function App() {
         </div>
         
         <div className='grid-section' style={{ padding: '15px 10px'}}>
-          <Testmonials />
+          <Testimonials />
         </div>
       </div>
       }
@@ -112,7 +112,7 @@ function App() {
         </div>
 
         <div className='grid-section' onMouseEnter={() => handleMouseEnter('testimonials')} onMouseLeave={() => setHoveredSection(null)}>
-          <Testmonials />
+          <Testimonials />
         </div>
       </div>
       }
@@ -152,7 +152,7 @@ function App() {
 
         <div className='grid-row'>
           <div className='grid-section' style={{ width: '85%' }} onMouseEnter={() => handleMouseEnter('testimonials')} onMouseLeave={() => setHoveredSection(null)}>
-            <Testmonials />
+            <Testimonials />
           </div>
           <div className='grid-section' style={{ width: '15%' }} onMouseEnter={() => handleMouseEnter('build')} onMouseLeave={() => setHoveredSection(null)}>
             <Build isHovered={hoveredSection === 'build'} />
@@ -196,7 +196,7 @@ function App() {
             <Build isHovered={hoveredSection === 'build'} />
           </div>
           <div className='grid-section' style={{ width: '70%' }} onMouseEnter={() => handleMouseEnter('testimonials')} onMouseLeave={() => setHoveredSection(null)}>
-            <Testmonials />
+            <Testimonials />
           </div>
         </div>
       </div> }
