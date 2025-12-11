@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import './styles/App.scss'
-import About from './sections/About'
-import Socials from './sections/Socials'
-import Education from './sections/Education'
-import Contact from './sections/Contact'
-import Skills from './sections/Skills'
-import Build from './sections/Build'
-import Testimonials from './sections/Testimonials'
-import Experience from './sections/Experience'
+import {
+  About,
+  Socials,
+  Education,
+  Contact,
+  Skills,
+  Build,
+  Testimonials,
+  Experience
+} from './sections'
 import initializeAnalytics from './analytics/initializeAnalytics'
 import sendSectionHoverEvent from './analytics/sendSectionHoverEvent'
 import { useMediaQuery } from 'react-responsive'
