@@ -14,6 +14,7 @@ import initializeAnalytics from './analytics/initializeAnalytics'
 import sendSectionHoverEvent from './analytics/sendSectionHoverEvent'
 import { useMediaQuery } from 'react-responsive'
 import * as bp from './constants/breakpoints'
+import AppSmallScreen from './appLayouts/AppSmallScreen'
 
 type HoveredSection = 'socials' | 'education' | 'skills' | 'build' | 'testimonials' | 'experience' | null
 export type GridSection = Exclude<HoveredSection, null> | 'about' | 'contact'
@@ -36,48 +37,7 @@ function App() {
 
   return (
     <>
-      {isSmallScreen &&
-      // SMALL SCREEN VIEW
-      <div className='grid-column'>
-        <div className='grid-row' style={{ width: '100%' }}>
-          <div className='grid-section' style={{ width: '85%' }}>
-            <About />
-          </div>
-
-          <div className='grid-section' style={{ width: '15%' }}>
-            <Socials isHovered={true}/>
-          </div>
-        </div>
-      
-        <div className='grid-section experience-section'>
-          <Experience isHovered={false} />
-        </div>
-
-        <div className='grid-section contact-section'>
-          <Contact />
-        </div>
-        
-        <div className='grid-row' style={{ width: '100%' }}>
-          <div className='grid-section' style={{ width: '40%' }}>
-            <Skills isHovered={true} />
-          </div>
-          
-          <div className='grid-column' style={{ width: '60%' }}>
-            <div className='grid-section'>
-              <Education isHovered={true} />
-            </div>
-
-            <div className='grid-section' style={{ height: '100%' }}>
-              <Build isHovered={true} />
-            </div>
-          </div>
-        </div>
-        
-        <div className='grid-section' style={{ padding: '15px 10px'}}>
-          <Testimonials />
-        </div>
-      </div>
-      }
+      {isSmallScreen && <AppSmallScreen />}
 
       {isMediumCompactScreen &&
       // MEDIUM COMPACT SCREEN VIEW 
