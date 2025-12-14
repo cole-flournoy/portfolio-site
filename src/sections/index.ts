@@ -1,0 +1,8 @@
+export { default as About } from './About'
+export { default as Socials } from './Socials'
+export { default as Education } from './Education'
+export { default as Contact } from './Contact'
+export { default as Skills } from './Skills'
+export { default as Build } from './Build'
+export { default as Testimonials } from './Testimonials'
+export { default as Experience } from './Experience'
