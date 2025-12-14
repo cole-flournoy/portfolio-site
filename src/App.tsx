@@ -16,9 +16,15 @@ import { useMediaQuery } from 'react-responsive'
 import * as bp from './constants/breakpoints'
 import AppSmallScreen from './appLayouts/AppSmallScreen'
 import AppMediumCompactScreen from './appLayouts/AppMediumCompactScreen'
+import AppMediumScreen from './appLayouts/AppMediumScreen'
 
 export type HoveredSection = 'socials' | 'education' | 'skills' | 'build' | 'testimonials' | 'experience' | null
 export type GridSection = Exclude<HoveredSection, null> | 'about' | 'contact'
+export interface HoverableScreenLayoutProps {
+  hoveredSection: HoveredSection;
+  handleMouseEnter: (section: HoveredSection) => void;
+  setHoveredSection: (section: HoveredSection) => void;
+}
 
 initializeAnalytics()
 
@@ -42,49 +48,7 @@ function App() {
 
       {isMediumCompactScreen && <AppMediumCompactScreen hoveredSection={hoveredSection} handleMouseEnter={handleMouseEnter} setHoveredSection={setHoveredSection} />}
 
-      {isRegularMediumScreen &&
-      // REGULAR MEDIUM SCREEN VIEW 
-      <div className='grid-column'>
-        <div className='grid-row'>
-          <div className='grid-section' style={{ width: '50%' }} onMouseEnter={() => sendSectionHoverEvent('about')}>
-            <About />
-          </div>
-          
-          <div className='grid-column' style={{ width: '50%' }}>
-            <div className='grid-section contact-section' style={{ height: '50%' }} onMouseEnter={() => sendSectionHoverEvent('contact')}>
-              <Contact />
-            </div>
-            <div className='grid-section' style={{ minHeight: '60px', height: '50%' }} onMouseEnter={() => handleMouseEnter('socials')} onMouseLeave={() => setHoveredSection(null)}>
-              <Socials isHovered={hoveredSection === 'socials'}/>
-            </div>
-          </div>
-        </div>
-        
-        <div className='grid-row'>
-          <div className='grid-column' style={{ width: '35%' }}>
-            <div className='grid-section' style={{ height: '60%' }} onMouseEnter={() => handleMouseEnter('education')} onMouseLeave={() => setHoveredSection(null)}>
-              <Education isHovered={hoveredSection === 'education'} />
-            </div>     
-            <div className='grid-section' style={{ height: '40%' }} onMouseEnter={() => handleMouseEnter('skills')} onMouseLeave={() => setHoveredSection(null)}>
-              <Skills isHovered={hoveredSection === 'skills'} />
-            </div>
-          </div>
-
-          <div className='grid-section experience-section' style={{ width: '65%' }} onMouseEnter={() => handleMouseEnter('experience')} onMouseLeave={() => setHoveredSection(null)}>
-            <Experience isHovered={hoveredSection === 'experience'} />
-          </div>
-        </div>
-
-        <div className='grid-row'>
-          <div className='grid-section' style={{ width: '85%' }} onMouseEnter={() => handleMouseEnter('testimonials')} onMouseLeave={() => setHoveredSection(null)}>
-            <Testimonials />
-          </div>
-          <div className='grid-section' style={{ width: '15%' }} onMouseEnter={() => handleMouseEnter('build')} onMouseLeave={() => setHoveredSection(null)}>
-            <Build isHovered={hoveredSection === 'build'} />
-          </div>
-        </div>
-      </div>
-      }
+      {isRegularMediumScreen && <AppMediumScreen hoveredSection={hoveredSection} handleMouseEnter={handleMouseEnter} setHoveredSection={setHoveredSection} />}
 
       {isLargeScreen &&
       // LARGE SCREEN VIEW 

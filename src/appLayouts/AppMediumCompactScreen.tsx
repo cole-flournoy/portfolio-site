@@ -8,16 +8,11 @@ import {
   Testimonials,
   Experience
 } from '../sections'
-import type { HoveredSection } from '../App.tsx'
+import type { HoverableScreenLayoutProps } from '../App.tsx'
 import sendSectionHoverEvent from '../analytics/sendSectionHoverEvent';
 
-interface AppMediumCompactScreenProps {
-  hoveredSection: HoveredSection;
-  handleMouseEnter: (section: HoveredSection) => void;
-  setHoveredSection: (section: HoveredSection) => void;
-}
 
-export default function AppMediumCompactScreen({ hoveredSection, handleMouseEnter, setHoveredSection }: AppMediumCompactScreenProps) {
+export default function AppMediumCompactScreen({ hoveredSection, handleMouseEnter, setHoveredSection }: HoverableScreenLayoutProps) {
   return (
     <>  
       <div className='grid-column'>
