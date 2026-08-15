@@ -1,9 +1,11 @@
 :root {
   --color-light-text: rgba(208, 208, 198, 0.95);
-  --color-faded-light-text: rgba(208, 208, 198, 0.2);
-  --color-slightly-faded-light-text: rgba(208, 208, 198, 0.8);
+  --color-faded-light-text: rgba(208, 208, 198, 0.25);
+  // --color-faded-light-text: #2A4448; // This is now specific to the grid color (calculated to simulate opacity)
+  // --color-slightly-faded-light-text: rgba(208, 208, 198, 0.8);
+  --color-slightly-faded-light-text: #A6ADA7; // This is now specific to the grid color (calculated to simulate opacity)
   --color-dark-background: #171717;
-  --color-grid-background: #102024;
+  --color-grid-background: #002129; // If you change this, also change the slightly faded light text color above
 
   /* --text-size-header: 1.7rem; */
   /* --text-size-subheader: 1.3rem; */
