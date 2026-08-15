@@ -1,4 +1,4 @@
-import Timeline from '../assets/timeline.svg?react'
+import GanttExperience from '../assets/gantt_experience.svg?react'
 import './styles/Experience.scss'
 
 const Experience = ({isHovered}: { isHovered: boolean }) => {
@@ -11,7 +11,7 @@ const Experience = ({isHovered}: { isHovered: boolean }) => {
           <span style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', height: '3px', width: '3px', backgroundColor: 'inherit', borderRadius: '50%', zIndex: 10 }}></span> 
         </span> 
       </span>
-      <Timeline className='timeline' style={{ }} />
+      <GanttExperience className='gantt_experience' style={{ }} />
     </span>
   )
 }
